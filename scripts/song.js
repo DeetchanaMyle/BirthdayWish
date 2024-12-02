@@ -1,8 +1,8 @@
 // Get references to the images and the audio elements
 const firstImage = document.getElementById('main-image');
 const secondImage = document.getElementById('main-image-reverse');
-const firstSong = new Audio('/songs/SitaRamanTrimmed.mp3');  // replace with actual path to first song
-const secondSong = new Audio('/songs/NaanPizhaiTrimmed.mp3');  // replace with actual path to second song
+const firstSong = new Audio('./songs/SitaRamanTrimmed.mp3');  // replace with actual path to first song
+const secondSong = new Audio('./songs/NaanPizhaiTrimmed.mp3');  // replace with actual path to second song
 
 // Initially, no song is playing
 let currentSong = null;
