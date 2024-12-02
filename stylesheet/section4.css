@@ -1,0 +1,69 @@
+/* Section styles */
+.birthday-languages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    /* background: linear-gradient(145deg, #1a1a2e, #16213e); */
+    background: linear-gradient(135deg, #FF4E75, #FFC85C);
+    overflow: hidden;
+  }
+  
+  /* Central language display */
+  .language-display {
+    text-align: center;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    z-index: 2;
+  }
+  
+  #happy-birthday-text {
+    font-size: 3rem;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  #language-name {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: #ffcccb;
+  }
+  
+  /* Rotating globe styles */
+  .rotating-globe {
+    position: absolute;
+    top: 50%;
+    right: 15%;
+    transform: translateY(-50%);
+    width: 300px;
+    height: 300px;
+    z-index: 1;
+  }
+  
+  #globe-container {
+    width: 100%;
+    height: 100%;
+    animation: rotateGlobe 15s linear infinite;
+  }
+  
+  /* Keyframes for animations */
+  @keyframes rotateGlobe {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  

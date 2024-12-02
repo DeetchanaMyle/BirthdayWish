@@ -1,0 +1,35 @@
+/* Video Background Section */
+#video-background-section {
+    position: relative;
+    width: 100vw; 
+    height: 100vh;
+    overflow: hidden; 
+}
+
+#background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw; /* Make sure it spans the entire width */
+    border-radius: 50px;
+    object-fit: cover; /* Ensure the video covers the entire area */
+    z-index: -1; /* Place it behind other content */
+}
+
+.content {
+    position: relative; /* Content appears above the video */
+    z-index: 1; /* Ensure content is above the video */
+    text-align: center;
+    color: white; /* Adjust text color for contrast */
+    font-family: Arial, sans-serif;
+}
+
+.content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.content p {
+    font-size: 1.2rem;
+}

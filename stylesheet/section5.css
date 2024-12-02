@@ -1,0 +1,182 @@
+
+.interactive-section {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+  }
+  
+  .left-half {
+    width: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .main-image {
+    position: absolute;
+    z-index: 2;
+    height: 200px;
+    width: 200px;
+    border-radius: 5%;
+    overflow: hidden;
+  }
+  
+  .main-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .orbit-images {
+    position: absolute;
+    height: 500px;
+    width: 500px;
+    border-radius: 5%;
+    animation: orbit 15s linear infinite;
+  }
+  
+  .orbit-img {
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .orbit-img:nth-child(1) { top: 0; left: 50%; transform: translateX(-50%); }
+  .orbit-img:nth-child(2) { top: 50%; left: 100%; transform: translateY(-50%) translateX(-100%); }
+  .orbit-img:nth-child(3) { bottom: 0; left: 50%; transform: translateX(-50%); }
+  .orbit-img:nth-child(4) { bottom: 50%; left: 0; transform: translateY(50%); }
+  .orbit-img:nth-child(5) { top: 0; left: 0; transform: translateX(0); }
+  
+  /* Right Half */
+  .right-half {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .selected-image {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .selected-image img {
+    min-width: 450px;
+    object-fit: cover;
+  }
+  
+  .quote {
+    font-size: 18px;
+    color: #fff;
+    font-weight: 700;
+    font-family: 'Arial', sans-serif;
+    z-index: 100; 
+  }
+  
+  @keyframes orbit {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+.interactive-section-reverse {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+  }
+  
+  .left-half-reverse {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .selected-image-reverse {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .selected-image-reverse img {
+    min-width: 450px;
+    object-fit: cover;
+  }
+
+  .quote-reverse {
+    font-size: 18px;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+  }
+
+  .right-half-reverse {
+    width: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main-image-reverse {
+    position: absolute;
+    z-index: 2;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  .main-image-reverse img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .orbit-images-reverse {
+    position: absolute;
+    height: 600px;
+    width: 400px;
+    border-radius: 50%;
+    animation: orbit-reverse 15s linear infinite;
+  }
+  
+  .orbit-img-reverse {
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .orbit-img-reverse:nth-child(1) { top: 0; left: 50%; transform: translateX(-50%); }
+  .orbit-img-reverse:nth-child(2) { top: 50%; left: 100%; transform: translateY(-50%) translateX(-100%); }
+  .orbit-img-reverse:nth-child(3) { bottom: 0; left: 50%; transform: translateX(-50%); }
+  .orbit-img-reverse:nth-child(4) { bottom: 50%; left: 0; transform: translateY(50%); }
+  .orbit-img-reverse:nth-child(5) { top: 0; left: 0; transform: translateX(0); }
+  
+  @keyframes orbit-reverse {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-360deg);
+    }
+  }
+  
+
+.interactive-section , .interactive-section-reverse {
+  background: linear-gradient(135deg, #FF4E75, #FFC85C);
+}

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=1024, initial-scale=1">
+    <meta name="viewport" content="width=1024, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Birthday Wish</title>
+    <link rel="stylesheet" href="./stylesheet/styles.css">
+    <link rel="stylesheet" href="./stylesheet/section1.css">
+    <link rel="stylesheet" href="./stylesheet/section2.css">
+    <link rel="stylesheet" href="./stylesheet/section3.css">
+    <link rel="stylesheet" href="./stylesheet/section4.css">
+    <link rel="stylesheet" href="./stylesheet/section5.css">
+    <link rel="stylesheet" href="./stylesheet/section6.css">
+    <link rel="stylesheet" href="./stylesheet/section7.css">
+
+    <style>
+        @media only screen and (max-width: 1024px) {
+            body {
+                display: none; /* Hides content for screen widths <= 1024px */
+            }
+        }
+    </style>
+
+</head>
+<body id="body">
+
+    <div id="loading-screen">
+        <div class="loader"></div> <!-- A simple loader animation -->
+    </div>
+
+    <section id="landing" class="landing-section">
+        <section id="confetti-section">
+            <div class="confetti-container">
+                <button id="celebrate-button">Celebrate!</button>
+            </div>
+        </section>
+        
+        <div class="landing-content">
+            <h1 class="main-wish">Happy Birthday!</h1>
+            <p class="sub-wish">Wishing you a day filled with love, joy, and cherished memories.</p>
+        </div>
+        
+        <section id="fireworks-section">
+            <div class="fireworks-container">
+                <button id="fireworks-button">Start Fireworks!</button>
+            </div>
+        </section>
+        
+    </section>    
+
+    <!-- section - 1 - intro -->
+
+    <section id="intro" class="intro-section">
+        <div class="sliding-panel left-panel">
+            <img src="./images/actual/leftsidepic.jpg" alt="Left Image">
+            <p class="wish-passage">"You are the ones who gave me the gift of life, the very beginning of my journey. Dad, you are the quiet strength that anchors me, the foundation of who I am. Mom, you carried me close to your heart even before I entered this world, nurturing me with your love and resilience. Together, you gave me the roots to grow, a part of yourselves that will always be with me. No matter where life takes me, I will always cherish the bond we share, for it is the essence of my being."</p>
+        </div>
+        
+        <!-- Center Section with Curved Text -->
+        <div class="center-text">
+            <svg class="text-curve" viewBox="0 0 500 150" xmlns="http://www.w3.org/2000/svg">
+                <!-- Upward Curve -->
+                <path id="upper-curve" d="M 50 100 Q 250 -50 450 100" fill="transparent" />
+                <text>
+                    <textPath xlink:href="#upper-curve" startOffset="50%">
+                        Brought me to the world...
+                    </textPath>
+                </text>
+            </svg>
+            <svg class="text-curve" viewBox="0 0 500 150" xmlns="http://www.w3.org/2000/svg">
+                <!-- Downward Curve -->
+                <path id="lower-curve" d="M 50 50 Q 250 200 450 50" fill="transparent" />
+                <text>
+                    <textPath xlink:href="#lower-curve" startOffset="50%">
+                        And taught me about it
+                    </textPath>
+                </text>
+            </svg>
+        </div>
+        
+        <div class="sliding-panel right-panel">
+            <img src="./images/actual/rightsidepic.jpg" alt="Right Image">
+            <p class="wish-passage">"You are the ones who raised me, who held my hand and guided me through life’s paths. Dad, you’ve been my protector, my mentor, and my greatest supporter, teaching me the strength to stand tall and face life’s challenges. Mom, you’ve been my guiding light, showing me the beauty of kindness and the warmth of belonging. Together, you created a home where I felt loved, safe, and cherished. Your love has shaped me into who I am today, and for that, I will always be grateful beyond words."</p>
+        </div>
+    </section>
+
+    <!-- Section 2 - Womb -->
+
+    <section id="video-background-section">
+        <video autoplay loop muted playsinline id="background-video">
+            <source src="./songs/MainVideoWM.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <!-- Section 3 - Timer -->
+
+    <section id="countdown-section">
+        <div class="countdown-container">
+            <div class="countdown">
+                <div class="time-unit" id="years">
+                    <span class="number">0</span>
+                    <span class="label">Years</span>
+                </div>
+                <div class="time-unit" id="months">
+                    <span class="number">0</span>
+                    <span class="label">Months</span>
+                </div>
+                <div class="time-unit" id="days">
+                    <span class="number">0</span>
+                    <span class="label">Days</span>
+                </div>
+                <div class="time-unit" id="hours">
+                    <span class="number">0</span>
+                    <span class="label">Hours</span>
+                </div>
+                <div class="time-unit" id="minutes">
+                    <span class="number">0</span>
+                    <span class="label">Minutes</span>
+                </div>
+                <div class="time-unit" id="seconds">
+                    <span class="number">0</span>
+                    <span class="label">Seconds</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- section - 4 -  -->
+
+    <section class="birthday-languages">
+        <div class="content-container">
+          <div class="language-display">
+            <h1 id="happy-birthday-text"></h1>
+            <p id="language-name"></p>
+          </div>
+        </div>
+        <div class="rotating-globe">
+          <div id="globe-container"></div>
+        </div>
+    </section>
+    
+    <!-- section - 5 -  -->
+    
+    <section class="interactive-section">
+        <!-- Left Half -->
+        <div class="left-half">
+          <div class="main-image">
+            <img  src="./../images/actual/firstmainpic.jpg" alt="Main Image" id="main-image" />
+          </div>
+          <div class="orbit-images">
+            <img src="./../images/actual/pic1.jpg" alt="Orbit Image 1" class="orbit-img" data-quote="A friend is someone who knows all about you and still loves you." />
+            <img src="./../images/actual/pic2.jpg" alt="Orbit Image 2" class="orbit-img" data-quote="Friendship is born at that moment when one person says to another, 'What! You too? I thought I was the only one." />
+            <img src="./../images/actual/pic3.jpg" alt="Orbit Image 3" class="orbit-img" data-quote="A true friend is somebody who can make us feel better no matter how bad things may be." />
+            <img src="./../images/actual/pic4.jpg" alt="Orbit Image 4" class="orbit-img" data-quote="There are no strangers here; Only friends you haven’t yet met." />
+            <img src="./../images/actual/pic5.jpg" alt="Orbit Image 5" class="orbit-img" data-quote="A friend is what the heart needs all the time." />
+          </div>
+        </div>
+      
+        <!-- Right Half -->
+        <div class="right-half">
+          <div class="selected-image">
+            <img src="./images/actual/firstmainpic.jpg" alt="Selected Image" id="selected-image" />
+          </div>
+          <div class="quote">
+            <p id="quote-text">Good friends are like stars. You don’t always see them, but you know they’re always there.</p>
+          </div>
+        </div>
+      </section>
+      
+
+      <section class="interactive-section-reverse">
+        <!-- Left Half -->
+        <div class="left-half-reverse">
+          <div class="selected-image-reverse">
+            <img src="./images/actual/secondmainpic.jpg" alt="Selected Image" id="selected-image-reverse" />
+          </div>
+          <div class="quote-reverse">
+            <p id="quote-text-reverse">Family is not an important thing. It's everything.</p>
+          </div>
+        </div>
+      
+        <!-- Right Half -->
+        <div class="right-half-reverse">
+          <div class="main-image-reverse">
+            <img  src="./images/actual/secondmainpic.jpg" alt="Main Image" id="main-image-reverse" />
+          </div>
+          <div class="orbit-images-reverse">
+            <img src="./images/actual/spic1.jpg" alt="Orbit Image 1" class="orbit-img-reverse" data-quote="The love of a family is life's greatest blessing." />
+            <img src="./images/actual/spic2.jpg" alt="Orbit Image 2" class="orbit-img-reverse" data-quote="Family means no one gets left behind or forgotten." />
+            <img src="./images/actual/spic3.jpg" alt="Orbit Image 3" class="orbit-img-reverse" data-quote="In time of test, family is best." />
+            <img src="./images/actual/spic4.jpg" alt="Orbit Image 4" class="orbit-img-reverse" data-quote="Rejoice with your family in the beautiful land of life!" />
+            <img src="./images/actual/spic5.jpg" alt="Orbit Image 5" class="orbit-img-reverse" data-quote="A family is a place where minds come in contact with one another." />
+          </div>
+        </div>
+      </section>
+      
+    
+    <!-- section 6 -->
+
+    <section class="secret-section">
+        <h2>Leave Feedback</h2>
+        <div class="input-container">
+            <input type="text" id="secret-input" placeholder="">
+            <button id="unlock-button">Unlock</button>
+        </div>
+        
+        <div class="video-container" id="video-container">
+            <video id="secret-video" controls>
+                <source src="./images/actual/hiddenvideo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        
+        <p id="code-message"></p> <!-- Message for incorrect code -->
+    </section>
+    
+    
+        
+    <!-- section - 7 -  -->
+
+    <section id="closing" class="closing-section">
+        <div class="closing-content">
+            <h1 class="mywebsite">WishMyPartner.com</h1>
+            <h2>Thank You for Celebrating With Us!</h2>
+            <p>We hope this journey brought smiles and cherished memories. See you again!</p>
+            <div class="closing-buttons">
+                <button onclick="scrollToTop()">Revisit</button>
+                <a href="https://wishmypartner.com/"> <button> Visit Website </button></a>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Scripts below -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/section1.js"></script>
+    <script src="./scripts/section2.js"></script>
+    <script src="./scripts/section3.js"></script>
+    <script src="./scripts/section4.js"></script>
+    <script src="./scripts/section5.js"></script>
+    <script src="./scripts/section6.js"></script>
+    <script src="./scripts/section7.js"></script>
+    <script src="./scripts/song.js" ></script>
+
+</body>
+
+    <script>
+        if (window.innerWidth < 1024) {
+            document.body.innerHTML = "<h1>Sorry, this site is only available in desktop mode.</h1>";
+        }
+
+        if (window.innerWidth < 1024) {
+            window.location.href = "https://yourwebsite.com/mobile-not-available";
+        }
+
+    </script>
+
+</html>
